@@ -1,0 +1,115 @@
+$image-item:( 1:"../images/desktop/image-deep-earth.jpg", 2:"../images/desktop/image-night-arcade.jpg", 3:"../images/desktop/image-soccer-team.jpg", 4:"../images/desktop/image-grid.jpg", 5:"../images/desktop/image-from-above.jpg", 6:"../images/desktop/image-pocket-borealis.jpg", 7:"../images/desktop/image-curiosity.jpg", 8:"../images/desktop/image-fisheye.jpg");
+$image-mobile:(1:"../images/mobile/image-deep-earth.jpg", 2:"../images/mobile/image-night-arcade.jpg", 3:"../images/mobile/image-soccer-team.jpg", 4:"../images/mobile/image-grid.jpg", 5:"../images/mobile/image-from-above.jpg", 6:"../images/mobile/image-pocket-borealis.jpg", 7:"../images/mobile/image-curiosity.jpg", 8:"../images/mobile/image-fisheye.jpg");
+.content {
+    .container {
+        .sub-title {
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                font-size: 48px;
+                text-transform: uppercase;
+            }
+            button {
+                border: 1px solid black;
+                height: 40px;
+                width: 120px;
+                margin: auto 0px;
+                background-color: white;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: black;
+                }
+            }
+        }
+        .sub-content {
+            display: flex;
+            flex-wrap: wrap;
+            .poster {
+                width: 24%;
+                margin: 0px 0.5% 20px 0.5%;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 420px;
+                cursor: pointer;
+                font-size: 32px;
+                color: white;
+                text-transform: uppercase;
+                @each $index,
+                $image in $image-item {
+                    &:nth-child(#{$index}) {
+                        background-image:url(#{$image})
+                    }
+                }
+                h3 {
+                    margin-left: 10%;
+                    margin-top: 90%;
+                    padding-top: 30%;
+                    padding-right: 10%;
+                    font-weight: 300;
+                }
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0px 1px 20px rgba(black, 0.4);
+                }
+            }
+        }
+        .mobile {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:788px) {
+    .sub-title {
+        display: block;
+        h3 {
+            display: block;
+            font-size: 35px !important;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+        button {
+            display: none;
+        }
+    }
+    .sub-content {
+        display: block !important;
+        .poster {
+            display: block !important;
+            width: 100% !important;
+            margin: 0px !important;
+            background-position: left top !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 150px !important;
+            font-size: 32px;
+            @each $index,
+            $image in $image-mobile {
+                &:nth-child(#{$index}) {
+                    background-image:url(#{$image})
+                }
+            }
+            h3 {
+                margin-left: 5% !important;
+                margin-top: 5% !important;
+                padding-top: 20% !important;
+                padding-right: 30% !important;
+            }
+        }
+    }
+    .mobile {
+        display: block !important;
+        border: 1px solid black;
+        height: 40px;
+        width: 150px;
+        margin: auto;
+        margin-top: 20px;
+        background-color: white;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+        }
+    }
+}

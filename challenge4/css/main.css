@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+header {
+  color: white;
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 125px;
+}
+
+header .container {
+  margin: 0px auto !important;
+  padding-top: 30px;
+}
+
+header .container nav {
+  margin: 25px auto 0px auto !important;
+  height: 80px;
+}
+
+header .container nav h1 {
+  text-transform: uppercase;
+  position: absolute;
+  top: 30px;
+}
+
+header .container nav ul {
+  float: right;
+}
+
+header .container nav ul li {
+  font-weight: 700;
+  margin-left: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header .container nav ul li a {
+  position: relative;
+  text-decoration: none;
+  padding: 5px 0;
+  color: white;
+}
+
+header .container nav ul li a::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .4s linear;
+  transition: -webkit-transform .4s linear;
+  transition: transform .4s linear;
+  transition: transform .4s linear, -webkit-transform .4s linear;
+}
+
+header .container nav ul li a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header .container nav label #btn {
+  color: white;
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+header .container nav label #cancel {
+  color: white;
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+header .container nav #check {
+  display: none;
+}
+
+header .container .title {
+  margin-top: 150px;
+  padding: 40px 0px 40px 40px;
+  width: 50%;
+  border: 1px solid white;
+  font-size: 63px;
+}
+
+header .container .title p {
+  margin: 0;
+}
+
+@media (max-width: 766px) {
+  nav label #btn {
+    display: block !important;
+    color: white;
+  }
+  nav ul {
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background: black;
+    top: 80px;
+    left: -150%;
+    text-align: left;
+  }
+  nav ul li {
+    display: block !important;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+  nav #check:checked ~ label #btn {
+    display: none !important;
+  }
+  nav #check:checked ~ label #cancel {
+    display: block;
+  }
+  .title {
+    margin-top: 120px !important;
+    width: 90% !important;
+    padding: 20px 10px 20px 20px !important;
+  }
+  .title p {
+    font-size: 39px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1025px) {
+  .title {
+    width: 70% !important;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 900px) {
+  .title {
+    margin-top: 120px !important;
+    width: 90% !important;
+    padding: 20px 10px 20px 20px !important;
+  }
+  .title p {
+    font-size: 39px;
+    margin: 5px;
+  }
+  li {
+    margin-left: 10px !important;
+  }
+}
+
+.jumbotron .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jumbotron .container img {
+  width: 70%;
+}
+
+.jumbotron .container .text {
+  margin-top: auto;
+  background-color: white;
+  width: 100%;
+  height: 300px;
+  padding-top: 30px;
+  margin-left: -150px;
+  padding-left: 60px;
+  margin-bottom: -5px;
+}
+
+.jumbotron .container .text h3 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-top: 10%;
+  margin-bottom: 0px;
+}
+
+.jumbotron .container .text p {
+  margin-top: 35px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+  font-family: 'Alata', sans-serif;
+  color: grey;
+}
+
+@media (max-width: 788px) {
+  .jumbotron .container {
+    display: block;
+  }
+  .jumbotron .container img {
+    display: block;
+    width: 100%;
+  }
+  .jumbotron .container .text {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .jumbotron .container .text h3 {
+    font-size: 34px;
+    margin-bottom: -5px;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1025px) {
+  h3 {
+    font-size: 38px !important;
+  }
+}
+
+.content .container .sub-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .container .sub-title h3 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.content .container .sub-title button {
+  border: 1px solid black;
+  height: 40px;
+  width: 120px;
+  margin: auto 0px;
+  background-color: white;
+}
+
+.content .container .sub-title button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.content .container .sub-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .container .sub-content .poster {
+  width: 24%;
+  margin: 0px 0.5% 20px 0.5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 420px;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.content .container .sub-content .poster:nth-child(1) {
+  background-image: url(../images/desktop/image-deep-earth.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(2) {
+  background-image: url(../images/desktop/image-night-arcade.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(3) {
+  background-image: url(../images/desktop/image-soccer-team.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(4) {
+  background-image: url(../images/desktop/image-grid.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(5) {
+  background-image: url(../images/desktop/image-from-above.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(6) {
+  background-image: url(../images/desktop/image-pocket-borealis.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(7) {
+  background-image: url(../images/desktop/image-curiosity.jpg);
+}
+
+.content .container .sub-content .poster:nth-child(8) {
+  background-image: url(../images/desktop/image-fisheye.jpg);
+}
+
+.content .container .sub-content .poster h3 {
+  margin-left: 10%;
+  margin-top: 90%;
+  padding-top: 30%;
+  padding-right: 10%;
+  font-weight: 300;
+}
+
+.content .container .sub-content .poster:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+}
+
+.content .container .mobile {
+  display: none;
+}
+
+@media (max-width: 788px) {
+  .sub-title {
+    display: block;
+  }
+  .sub-title h3 {
+    display: block;
+    font-size: 35px !important;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .sub-title button {
+    display: none;
+  }
+  .sub-content {
+    display: block !important;
+  }
+  .sub-content .poster {
+    display: block !important;
+    width: 100% !important;
+    margin: 0px !important;
+    background-position: left top !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px !important;
+    font-size: 32px;
+  }
+  .sub-content .poster:nth-child(1) {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+  }
+  .sub-content .poster:nth-child(2) {
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+  }
+  .sub-content .poster:nth-child(3) {
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+  }
+  .sub-content .poster:nth-child(4) {
+    background-image: url(../images/mobile/image-grid.jpg);
+  }
+  .sub-content .poster:nth-child(5) {
+    background-image: url(../images/mobile/image-from-above.jpg);
+  }
+  .sub-content .poster:nth-child(6) {
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+  }
+  .sub-content .poster:nth-child(7) {
+    background-image: url(../images/mobile/image-curiosity.jpg);
+  }
+  .sub-content .poster:nth-child(8) {
+    background-image: url(../images/mobile/image-fisheye.jpg);
+  }
+  .sub-content .poster h3 {
+    margin-left: 5% !important;
+    margin-top: 5% !important;
+    padding-top: 20% !important;
+    padding-right: 30% !important;
+  }
+  .mobile {
+    display: block !important;
+    border: 1px solid black;
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+  }
+  .mobile a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding-bottom: 20px;
+}
+
+footer .container {
+  margin-bottom: 0px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .nav ul {
+  padding: 0;
+}
+
+footer .container .nav ul li {
+  margin-right: 25px;
+}
+
+footer .container .social ul {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  padding: 0;
+  text-align: right;
+}
+
+footer .container .social ul li {
+  margin-left: 10px;
+  text-align: right;
+}
+
+@media (max-width: 788px) {
+  .container {
+    display: block !important;
+    text-align: center;
+  }
+  .container .nav h1 {
+    padding-top: 20px;
+  }
+  .container .nav ul li {
+    display: block !important;
+    margin-bottom: 20px;
+  }
+  .container .social ul {
+    text-align: center !important;
+  }
+  .container .social ul li {
+    margin-left: 0px !important;
+    margin-right: 10px;
+  }
+}
+
+/*
+font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
+header .container nav ul li, footer .container .nav ul li, footer .container .social ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Alata', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+/*# sourceMappingURL=main.css.map */
